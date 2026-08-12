@@ -512,7 +512,7 @@
     {id:'vomito',  ic:'🤢', q:'Chi vomiterà per primo?'},
     {id:'perso',   ic:'🧭', q:'Chi si perderà per primo?'},
     {id:'arresto', ic:'🚔', q:'Chi verrà arrestato per primo?'},
-    {id:'sedotto', ic:'💘', q:'Chi verrà sedotto per primo?'}
+    {id:'sedotto', ic:'💘', q:'Chi verrà violentato per primo?'}
   ];
 
   const REMOTO = /^https?:\/\//.test(SHEET_URL);
@@ -537,7 +537,7 @@
         <h3><span class="ic">${c.ic}</span><span>${c.q}</span></h3>
         <div class="vota">
           <select id="sel-${c.id}" aria-label="${c.q}">
-            <option value="">— scegli un GANI —</option>
+            <option value="">— scegli un GANE —</option>
             ${GANI.map(n=>`<option>${n}</option>`).join('')}
           </select>
           <button type="button" data-cat="${c.id}">VOTA</button>
