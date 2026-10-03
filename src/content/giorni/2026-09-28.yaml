@@ -1,0 +1,86 @@
+# BOZZA ricostruita dalla chat del gruppo.
+data: 2026-09-28
+titolo: Lunedì 28 · I ricatti
+sottotitolo: Defaticante all'alba, check-out a mezzogiorno, Wiesn fino a sera.
+
+momenti:
+  - id: defaticante
+    ora: "07:24"
+    luogo: Monaco
+    titolo: Il 5 km defaticante
+    testo: |
+      Il programma morigeratezza esisteva davvero. Il Maestro e Bubba escono a correre, [Bruno] si aggrega.
+    citazione:
+      testo: Stiamo andando a farci un 5 km defaticante.
+      autore: Il Maestro
+    protagonisti: [il-maestro, bubba]
+    media: []
+
+  - id: check-out
+    ora: "09:09"
+    luogo: Hotel
+    titolo: Check-out
+    testo: |
+      Stanze da lasciare alle 12 (fonte: Ing). Valigie in reception, si torna all'Oktoberfest.
+    protagonisti: [ing]
+    media: []
+
+  - id: ricatti
+    ora: "13:35"
+    luogo: Andy's
+    titolo: Intervento tecnico
+    testo: |
+      Sosta da Andy's. Nel gruppo cominciano a girare foto della sera prima, e a sparire messaggi.
+      Dino lo definisce «intervento tecnico». Alle 13:45 il gruppo cambia nome: «Oktoberfest 🍻 🍻 & ricatti».
+    citazione:
+      testo: Il gruppo è sotto intervento tecnico.
+      autore: Dino
+    protagonisti: [dino, gabbo]
+    media: []
+
+  - id: trono-kebab
+    ora: "17:42"
+    luogo: Theresienwiese
+    titolo: Il trono del kebab
+    testo: |
+      Passaggio di consegne storico: [Chicco] perde il trono del kebab.
+    protagonisti: []
+    media:
+      - foto: 28-kebab.jpg
+
+  - id: ricco-per-sbaglio
+    ora: "19:03"
+    luogo: Tendone
+    titolo: Ricco per sbaglio
+    testo: |
+      Battuta della serata.
+    citazione:
+      testo: 30 secondi che so ricco per sbaglio e già sti poveri mi stanno sul cazzo.
+      autore: "[Matteo]"
+    protagonisti: []
+    media: []
+
+  - id: chiavi
+    ora: "19:37"
+    luogo: Monaco
+    titolo: Le chiavi
+    testo: |
+      Monaco presenta il conto a [Bruno].
+    citazione:
+      testo: Rega, Monaco ha lasciato il segno... me so perso le chiavi della macchina.
+      autore: "[Bruno]"
+    protagonisti: []
+    media: []
+
+  - id: rientro-maestro
+    ora: "23:32"
+    luogo: Verso la Sicilia
+    titolo: Dal lato sbagliato
+    testo: |
+      Il Maestro rientra e trova l'ultimo ostacolo all'ultimo chilometro.
+      Alle 3:21 di notte chiede al gruppo a quale capannone siano.
+    citazione:
+      testo: Arrivato in Sicilia! Sto solo dal lato sbagliato...
+      autore: Il Maestro
+    protagonisti: [il-maestro]
+    media: []

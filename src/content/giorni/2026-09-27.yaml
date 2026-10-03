@@ -1,0 +1,90 @@
+# BOZZA ricostruita dalla chat del gruppo.
+data: 2026-09-27
+titolo: Domenica 27 · Il Marstall
+sottotitolo: Tavolo alle 11, torre al pomeriggio, porte chiuse la sera.
+
+momenti:
+  - id: dalle-19
+    ora: "10:23"
+    luogo: Hotel
+    titolo: «Dalle 19»
+    testo: |
+      Il Maestro fa il punto: «Dini ha la tripla». Gabbo chiede quante ore abbia dormito.
+    citazione:
+      testo: Dalle 19. Ma non è mai abbastanza.
+      autore: Dino
+    protagonisti: [dino, il-maestro, gabbo]
+    media: []
+
+  - id: marstall
+    ora: "10:38"
+    luogo: Marstall Festzelt, ingresso posteriore
+    titolo: Corsa al tavolo
+    testo: |
+      Si entra da dietro. Cancio avverte: alle 11:10, se non siamo dentro, i tavoli vengono riassegnati.
+      Dino e altri sono «alla cattedrale». Videochiamata a 9, Cecio guida l'ultimo tratto: «Dovete venire dietro».
+      Alle 10:58 arrivano le prime foto dal tavolo.
+    citazione:
+      testo: Alle 11.10 dicono che se non entriamo ci tolgono i tavoli.
+      autore: Cancio
+    protagonisti: [cancio, cecio, dino]
+    media:
+      - foto: 27-marstall-1.jpg
+      - foto: 27-marstall-2.jpg
+      - foto: 27-marstall-3.jpg
+
+  - id: paulaner-bis
+    ora: "14:08"
+    luogo: Paulaner
+    titolo: Ritorno dove stavamo ieri
+    testo: |
+      Dopo il Marstall il gruppo si sparpaglia. Cancio trova due tavoli liberi al Paulaner, dove si era stati il giorno prima.
+    citazione:
+      testo: Io sto alla Paulaner. Si entra facile.
+      autore: Cancio
+    protagonisti: [cancio]
+    media: []
+
+  - id: la-torre
+    ora: "15:15"
+    luogo: Sotto la torre
+    titolo: La torre
+    testo: |
+      Dino lancia la sfida: «Vieni a fare la torre». Gabbo declina. Dino e Bubba salgono, il resto aspetta sotto.
+      Il Maestro passa, con certificato medico.
+    citazione:
+      testo: Il cardiologo ha detto no.
+      autore: Il Maestro
+    protagonisti: [dino, bubba, gabbo, il-maestro, alessio]
+    media:
+      - video: 27-torre.mp4
+
+  - id: cacciati
+    ora: "17:26"
+    luogo: Paulaner
+    titolo: «Ci hanno cacciato»
+    testo: |
+      Comunicato del Maestro alle 17:26. Alle 18:12 un secondo bollettino: «Tutto ok, c'è il dottore».
+      Alle 18:48 ci si ritrova di nuovo sotto la statua.
+    protagonisti: [il-maestro]
+    media: []
+
+  - id: porte-chiuse
+    ora: "19:34"
+    luogo: Fuori dai tendoni
+    titolo: Porte chiuse
+    testo: |
+      Gabbo è dentro e chiama tutti, ma la sicurezza non fa più entrare. Alle 20:10 [Chicco] segnala la Käfer Wiesn.
+      Alle 20:46 parte una chiamata di gruppo a 15: nessuno risponde.
+    protagonisti: [gabbo]
+    media: []
+
+  - id: gabbo-disperso
+    ora: "22:24"
+    luogo: Ben lontano dalla Wiesn
+    titolo: Gabbo fuori mappa
+    testo: |
+      Gabbo condivide la posizione: qualche chilometro a nord-est della Theresienwiese. «Sto tipo in culo.»
+      Alle 22:45 è all'ingresso. Alle 22:48 gli altri sono già usciti.
+    protagonisti: [gabbo]
+    media: []

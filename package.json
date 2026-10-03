@@ -1,0 +1,15 @@
+{
+  "name": "gani-wiesn-2026",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "foto": "node scripts/prepara-foto.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.18.2",
+    "sharp": "^0.34.0"
+  }
+}

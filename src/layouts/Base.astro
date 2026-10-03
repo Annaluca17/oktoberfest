@@ -1,0 +1,41 @@
+---
+import '../styles.css';
+
+interface Props { titolo: string; descrizione?: string; attiva?: 'pagelle' | 'diario' | 'prima' }
+const { titolo, descrizione = 'GANI all\'Oktoberfest 2026: pagelle, diario e verdetti.', attiva } = Astro.props;
+---
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>{titolo}</title>
+  <meta name="description" content={descrizione} />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍺</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="rauten"></div>
+  <div class="wrap">
+    <header class="top">
+      <a class="mark" href="/">
+        <span class="krug">🍺</span>
+        <div><b>GANI</b><br /><span>Wiesn 2026 · Il resoconto</span></div>
+      </a>
+      <nav class="menu">
+        <a href="/" class={attiva === 'pagelle' ? 'on' : ''}>Pagelle</a>
+        <a href="/diario" class={attiva === 'diario' ? 'on' : ''}>Diario</a>
+        <a href="/prima" class={attiva === 'prima' ? 'on' : ''}>Il prima</a>
+      </nav>
+    </header>
+    <slot />
+    <footer class="fondo">
+      <div class="prosit">O'ZAPFT WAR! 🍻</div>
+      <div class="small">GANI · Wiesn 2026 · München · prossima fermata 2027</div>
+    </footer>
+  </div>
+</body>
+</html>

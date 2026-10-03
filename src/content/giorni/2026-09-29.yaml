@@ -1,0 +1,31 @@
+# BOZZA ricostruita dalla chat del gruppo.
+data: 2026-09-29
+titolo: Martedì 29 · Il ritorno
+sottotitolo: Ultimo assaggio, viaggio di ritorno, prenotazione già in testa.
+
+momenti:
+  - id: ultimo-assaggio
+    ora: "11:24"
+    luogo: Monaco
+    titolo: Ultimo assaggio
+    testo: |
+      Le ultime foto prima della partenza. «È finita così ieri sera.»
+    citazione:
+      testo: Ultimo assaggio di una Monaco trash.
+      autore: "[Senexetti]"
+    protagonisti: []
+    media:
+      - foto: 29-ultimo-assaggio.jpg
+
+  - id: oktoberfest-2027
+    ora: "20:13"
+    luogo: Ognuno a casa sua
+    titolo: Oktoberfest 2027
+    testo: |
+      A casa da poche ore, si parla già della prossima. Gabbo propone di farla una volta l'anno, Alessio vuole prenotare appena finisce questa.
+      Il gruppo torna a chiamarsi «Oktoberfest 🍻2027 🍻».
+    citazione:
+      testo: Subito tavolo prenotato al Käfer Wiesn per la sera.
+      autore: Alessio
+    protagonisti: [gabbo, alessio]
+    media: []

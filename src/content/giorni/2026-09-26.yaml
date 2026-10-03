@@ -1,0 +1,115 @@
+# BOZZA ricostruita dalla chat del gruppo. Orari dai messaggi WhatsApp.
+# I nomi tra [quadre] sono nomi della chat ancora da abbinare al soprannome GANE.
+data: 2026-09-26
+titolo: Sabato 26 · Lo sbarco
+sottotitolo: Partenza all'alba, Wiesn al pomeriggio, una camera tripla con un solo inquilino.
+
+momenti:
+  - id: terminal-1
+    ora: "04:43"
+    luogo: Aeroporto, Terminal 1
+    titolo: «Buongiorno, che Terminal è?»
+    testo: |
+      Il primo a dare segni di vita è Dino, alle 4:43. Risponde Ing: Terminal 1.
+      Il volo è quello delle 7:25. Il Maestro, intanto, fa colazione a casa con un certo distacco.
+    citazione:
+      testo: 20 anni fa l'avrei fatto. Stamattina fette biscottate integrali e marmellata bio...
+      autore: Il Maestro
+    protagonisti: [dino, ing, il-maestro]
+    media:
+      - foto: 26-terminal.jpg
+
+  - id: maestro-atterra
+    ora: "08:39"
+    luogo: Monaco, aeroporto
+    titolo: Il Maestro non dà la sola
+    testo: |
+      Per giorni l'Etna aveva minacciato di lasciarlo a terra. Il Toto-Wiesn lo dava per disperso 9 a 5.
+      Alle 8:39 arriva il messaggio: «Arrivato, ditemi a che terminal siete».
+    protagonisti: [il-maestro]
+    media: []
+
+  - id: morigeratezza
+    ora: "12:14"
+    luogo: Monaco
+    titolo: La parola d'ordine
+    testo: |
+      Il sondaggio di metà settimana aveva sancito la linea: Morigeratezza 6, Ho fatto testamento 5.
+      Alessio la ribadisce a mezzogiorno, tra una raffica di foto e l'altra.
+    citazione:
+      testo: La parola d'ordine è... Morigeratezza.
+      autore: Alessio
+    protagonisti: [alessio]
+    media:
+      - foto: 26-morigeratezza-1.jpg
+      - foto: 26-morigeratezza-2.jpg
+
+  - id: primo-ingresso
+    ora: "14:40"
+    luogo: Theresienwiese
+    titolo: Si va a piedi
+    testo: |
+      Dall'hotel alla Wiesn ci si muove a piedi. Le istruzioni per i ritardatari sono essenziali:
+      «Metti maps». E soprattutto niente zaino.
+    citazione:
+      testo: Non veni con lo zaino che non entri.
+      autore: Cancio
+    protagonisti: [cancio, alessio]
+    media: []
+
+  - id: autoscontri
+    ora: "15:32"
+    luogo: Davanti al Paulaner
+    titolo: Autoscontri
+    testo: |
+      Il punto di ritrovo diventa l'autoscontro davanti al tendone Paulaner. Partono i primi video.
+    protagonisti: [il-maestro, cancio]
+    media:
+      - video: 26-autoscontri.mp4
+
+  - id: dino-disperso
+    ora: "16:15"
+    luogo: Theresienwiese, punto imprecisato
+    titolo: «Io non so do ve sto»
+    testo: |
+      Alle 16:15 Dino perde il contatto con il gruppo. Alle 16:53 dichiara: «È finito tutto».
+      Alle 17:18 il Maestro ufficializza il primo verdetto del Toto-Wiesn. Alle 17:57 Dino aggiunge: «Voglio morire».
+    citazione:
+      testo: Dini ha vinto il premio, primo che se perde.
+      autore: Il Maestro
+    protagonisti: [dino, il-maestro]
+    media: []
+
+  - id: camera-312
+    ora: "18:29"
+    luogo: Hotel, camera 312
+    titolo: 312 alone
+    testo: |
+      Rientro in hotel per il riposino. Dino si ritrova da solo in camera e lo comunica al gruppo più volte.
+      Il Maestro, intanto, recensisce i sanitari tedeschi.
+    citazione:
+      testo: Non c'è il bidet. Paese di animali.
+      autore: Il Maestro
+    protagonisti: [dino, il-maestro]
+    media: []
+
+  - id: pub-sabato
+    ora: "19:36"
+    luogo: Pub vicino all'hotel
+    titolo: Cena per chi resuscita
+    testo: |
+      «Per chi resuscita, stiamo andando a un pub che ha visto [Bruno] e penso ci ceniamo pure.»
+      Alle 21:25 il Maestro fissa un messaggio nel gruppo: «Complimenti ai vincitori del pronostico...».
+    protagonisti: [il-maestro, gabbo]
+    media:
+      - foto: 26-pub.jpg
+
+  - id: discoteca
+    ora: "01:28"
+    luogo: Discoteca in centro
+    titolo: «Se non torno, mandate qualcuno»
+    testo: |
+      Notte inoltrata. Una parte del gruppo finisce in discoteca, Cancio avvista «l'unico tuk tuk di Munich».
+      Alle 2:30 Dino si sveglia e scopre di avere una camera da tre tutta per sé.
+    protagonisti: [cancio, dino]
+    media: []

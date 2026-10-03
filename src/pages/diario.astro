@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import FotoSlot from '../components/FotoSlot.astro';
+import { fotoMomento } from '../lib';
+
+const giorni = (await getCollection('giorni')).sort((a, b) => +a.data.data - +b.data.data);
+const nomi = new Map((await getCollection('gani')).map((g) => [g.id, g.data.nome]));
+const paragrafi = (t: string) => t.trim().split(/\n\s*\n|\n/).filter(Boolean);
+---
+<Base titolo="GANI · Wiesn 2026 · Il diario" descrizione="Il diario dei GANI all'Oktoberfest 2026, giorno per giorno." attiva="diario">
+  <section class="hero">
+    <div class="kicker">Cronaca semi-epica</div>
+    <h1>Il <span class="gold">diario</span></h1>
+  </section>
+  <section class="sec">
+    <p class="bozza">Bozza ricostruita dalla chat del gruppo: testi e foto da completare.</p>
+    <nav class="giorni-nav">
+      {giorni.map((d) => <a href={`#${d.id}`}>{d.data.titolo.split('·')[0].trim()}</a>)}
+    </nav>
+    {giorni.map((d) => (
+      <section class="giorno" id={d.id}>
+        <header>
+          <h2>{d.data.titolo}</h2>
+          {d.data.sottotitolo && <p>{d.data.sottotitolo}</p>}
+        </header>
+        <div class="timeline">
+          {d.data.momenti.map((m) => (
+            <article class="momento" id={m.id}>
+              <div class="meta">{m.ora}{m.luogo && <i> · {m.luogo}</i>}</div>
+              <h3>{m.titolo}</h3>
+              <div class="testo">{paragrafi(m.testo).map((p) => <p>{p}</p>)}</div>
+              {m.citazione && (
+                <blockquote>«{m.citazione.testo}»<cite>— {m.citazione.autore}</cite></blockquote>
+              )}
+              {m.media.length > 0 && (
+                <div class="media">
+                  {m.media.map((x) => (
+                    <figure>
+                      {x.foto && <FotoSlot src={fotoMomento(x.foto)} alt={x.didascalia ?? m.titolo} segnaposto="📷" nota={`manca ${x.foto}`} sizes="(max-width: 720px) 50vw, 260px" larghezze={[320, 640, 1200]} />}
+                      {x.video && <video src={`/video/${x.video}`} controls preload="none" playsinline></video>}
+                      {x.youtube && <iframe src={`https://www.youtube-nocookie.com/embed/${x.youtube}`} title={x.didascalia ?? m.titolo} loading="lazy" allowfullscreen></iframe>}
+                      {x.didascalia && <figcaption>{x.didascalia}</figcaption>}
+                    </figure>
+                  ))}
+                </div>
+              )}
+              {m.protagonisti.length > 0 && (
+                <div class="chi">
+                  {m.protagonisti.map((p) => <a href={`/pagelle/${p}`}>{nomi.get(p) ?? p}</a>)}
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+  </section>
+</Base>

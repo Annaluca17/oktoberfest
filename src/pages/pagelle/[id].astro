@@ -1,0 +1,85 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import FotoSlot from '../../components/FotoSlot.astro';
+import Voto from '../../components/Voto.astro';
+import { fotoGane, iniziali, estratto } from '../../lib';
+
+export async function getStaticPaths() {
+  const gani = (await getCollection('gani')).sort((a, b) => a.data.nome.localeCompare(b.data.nome, 'it'));
+  return gani.map((g, i) => ({
+    params: { id: g.id },
+    props: { g, prec: gani[(i - 1 + gani.length) % gani.length], succ: gani[(i + 1) % gani.length] },
+  }));
+}
+
+const { g, prec, succ } = Astro.props;
+const pubblicata = g.data.stato === 'pubblicata';
+const { Content } = await render(g);
+
+// Momenti del diario in cui compare
+const giorni = (await getCollection('giorni')).sort((a, b) => +a.data.data - +b.data.data);
+const presenze = giorni.flatMap((d) =>
+  d.data.momenti.filter((m) => m.protagonisti.includes(g.id)).map((m) => ({ ...m, giorno: d.data.titolo.split('·')[0].trim() }))
+);
+const clou = g.data.clou;
+const clouMomento = clou?.momento ? presenze.find((m) => m.id === clou.momento) : undefined;
+---
+<Base
+  titolo={`${g.data.nome} · Pagella · GANI Wiesn 2026`}
+  descrizione={pubblicata ? `${g.data.nome}: ${g.data.voto ?? ''}. ${estratto(g.body, 140)}` : `La pagella di ${g.data.nome} è in arrivo.`}
+  attiva="pagelle"
+>
+  <section class="sec">
+    <article class="pagella">
+      <FotoSlot src={fotoGane(g.id)} alt={g.data.nome} segnaposto={iniziali(g.data.nome)} larghezze={[400, 800, 1200]} sizes="(max-width: 720px) 100vw, 440px" />
+      <div class="corpo">
+        <div class="testa">
+          <Voto voto={pubblicata ? g.data.voto : undefined} />
+          <h1>{g.data.nome}</h1>
+        </div>
+        {pubblicata ? (
+          <>
+            {g.data.titolo && <p class="occhiello">{g.data.titolo}</p>}
+            <div class="giudizio"><Content /></div>
+            {g.data.autore && <p class="firma">Pagella di {g.data.autore}</p>}
+          </>
+        ) : (
+          <p class="giudizio tbd">Pagella in arrivo.</p>
+        )}
+        {clou && (
+          <div class="clou">
+            <span>MOMENTO CLOU</span>
+            {clou.momento ? <a href={`/diario#${clou.momento}`}>{clou.testo}</a> : clou.testo}
+            {clouMomento && <div style="font-size:12.5px;opacity:.7;margin-top:4px">{clouMomento.giorno} · {clouMomento.ora}</div>}
+          </div>
+        )}
+        {presenze.length > 0 && (
+          <div>
+            <p class="firma" style="margin-bottom:6px">Nel diario</p>
+            <div class="chi">
+              {presenze.map((m) => <a href={`/diario#${m.id}`}>{m.giorno} · {m.titolo}</a>)}
+            </div>
+          </div>
+        )}
+        <div><button class="btn alt" type="button" id="condividi">Condividi la pagella</button></div>
+      </div>
+    </article>
+    <nav class="naviga">
+      <a class="btn alt" href={`/pagelle/${prec.id}`}>← {prec.data.nome}</a>
+      <a class="btn alt" href="/#pagelle">Tutte</a>
+      <a class="btn alt" href={`/pagelle/${succ.id}`}>{succ.data.nome} →</a>
+    </nav>
+  </section>
+  <script>
+    const b = document.getElementById('condividi') as HTMLButtonElement | null;
+    b?.addEventListener('click', async () => {
+      const url = location.href.split('#')[0];
+      try {
+        if (navigator.share) { await navigator.share({ title: document.title, url }); return; }
+        await navigator.clipboard.writeText(url);
+        b.textContent = 'Link copiato ✔';
+      } catch { /* annullato */ }
+    });
+  </script>
+</Base>

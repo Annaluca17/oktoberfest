@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>GANI · Il prima · Operazione Wiesn 2026</title>
+<meta name="description" content="Conto alla rovescia ufficiale: i GANI all'Oktoberfest di Monaco. Partenza 26/09/2026, tavolo al Marstall Festzelt il 27/09/2026 alle 11:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blu:#2b6cb0;          /* blu Baviera */
+    --blu-scuro:#173a63;
+    --crema:#f5efe0;
+    --schiuma:#fff8e7;
+    --oro:#e0a423;          /* oro birra / glitter banner */
+    --oro-chiaro:#f3c14a;
+    --legno:#241606;        /* legno scuro Bierzelt */
+    --legno-2:#150d03;
+    --rosso:#b8332a;        /* rosso bavarese */
+    --testo:#2a1c08;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Fraunces',Georgia,serif;
+    color:var(--testo);
+    background:var(--legno-2);
+    overflow-x:hidden;
+  }
+  /* ---- pattern losanga bavarese ---- */
+  .rauten{
+    position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.10;
+    background-color:var(--blu);
+    background-image:
+      linear-gradient(45deg,#fff 25%,transparent 25%,transparent 75%,#fff 75%),
+      linear-gradient(45deg,#fff 25%,transparent 25%,transparent 75%,#fff 75%);
+    background-size:64px 64px;
+    background-position:0 0,32px 32px;
+  }
+  #confetti{position:fixed;inset:0;z-index:60;pointer-events:none}
+  .wrap{position:relative;z-index:1}
+
+  /* ---- top bar ---- */
+  header{
+    position:sticky;top:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 22px;
+    background:linear-gradient(90deg,var(--legno),var(--legno-2));
+    border-bottom:3px solid var(--oro);
+    box-shadow:0 6px 24px rgba(0,0,0,.4);
+  }
+  .mark{display:flex;align-items:center;gap:12px}
+  .mark .krug{font-size:26px;filter:drop-shadow(0 2px 0 rgba(0,0,0,.4))}
+  .mark b{
+    font-family:'Alfa Slab One',cursive;color:var(--oro);
+    letter-spacing:2px;font-size:22px;-webkit-text-stroke:.5px var(--legno-2);
+  }
+  .mark span{color:var(--schiuma);font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;opacity:.8}
+  header .flag{display:flex;gap:3px}
+  header .flag i{width:10px;height:20px;display:block;transform:skewX(-12deg)}
+  .flag i:nth-child(odd){background:var(--blu)}
+  .flag i:nth-child(even){background:#fff}
+
+  /* ---- hero ---- */
+  .hero{
+    position:relative;
+    padding:64px 22px 40px;
+    text-align:center;
+    background:radial-gradient(120% 90% at 50% 0%,rgba(224,164,35,.18),transparent 60%);
+  }
+  .kicker{
+    display:inline-block;color:var(--oro-chiaro);font-weight:600;
+    letter-spacing:4px;text-transform:uppercase;font-size:14px;margin-bottom:14px;
+    border:1px solid rgba(224,164,35,.5);padding:7px 16px;border-radius:999px;
+    background:rgba(0,0,0,.25);
+  }
+  h1{
+    font-family:'Alfa Slab One',cursive;
+    color:var(--schiuma);
+    font-size:clamp(42px,9vw,104px);
+    line-height:.95;letter-spacing:1px;
+    text-shadow:0 4px 0 var(--legno),0 6px 18px rgba(0,0,0,.6);
+  }
+  h1 .gold{color:var(--oro)}
+  .sub{
+    color:var(--crema);max-width:640px;margin:18px auto 0;
+    font-size:clamp(16px,2.4vw,20px);line-height:1.5;opacity:.92;
+  }
+
+  /* ---- foto gruppo ---- */
+  .foto{
+    max-width:400px;margin:38px auto 0;position:relative;
+    border:6px solid var(--schiuma);border-radius:8px;overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.55),0 0 0 3px var(--oro);
+    transform:rotate(-1.2deg);
+  }
+  .foto img{display:block;width:100%;height:auto}
+  .foto .tag{
+    position:absolute;top:14px;right:-2px;background:var(--rosso);color:#fff;
+    font-family:'Anton',sans-serif;letter-spacing:1px;font-size:14px;
+    padding:6px 16px;transform:rotate(3deg);box-shadow:0 4px 12px rgba(0,0,0,.4);
+  }
+
+  /* ---- countdown ---- */
+  .countdown-sec{padding:54px 22px;text-align:center}
+  .cd-title{font-family:'Alfa Slab One',cursive;color:var(--oro);font-size:clamp(22px,4vw,34px);margin-bottom:6px}
+  .cd-note{color:var(--crema);opacity:.75;margin-bottom:30px;font-size:15px}
+  .clock{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;max-width:760px;margin:0 auto}
+  .unit{
+    background:linear-gradient(180deg,#3a2510,var(--legno));
+    border:2px solid var(--oro);border-radius:14px;
+    padding:18px 10px 14px;min-width:128px;flex:1;
+    box-shadow:inset 0 2px 0 rgba(255,255,255,.08),0 12px 28px rgba(0,0,0,.45);
+  }
+  .unit .num{font-family:'Anton',sans-serif;color:var(--schiuma);font-size:clamp(40px,9vw,68px);line-height:1;letter-spacing:2px}
+  .unit .lbl{color:var(--oro-chiaro);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:600;margin-top:8px}
+
+  /* ---- boccale / Maß-o-meter ---- */
+  .mass{max-width:560px;margin:48px auto 0;text-align:center}
+  .mass h3{font-family:'Alfa Slab One',cursive;color:var(--schiuma);font-size:20px;margin-bottom:18px}
+  .mug{
+    position:relative;width:150px;height:200px;margin:0 auto;
+    border:6px solid var(--schiuma);border-radius:0 0 18px 18px;
+    background:rgba(255,255,255,.06);overflow:hidden;
+    box-shadow:0 14px 30px rgba(0,0,0,.4);
+  }
+  .mug::after{ /* manico */
+    content:"";position:absolute;right:-46px;top:34px;width:42px;height:96px;
+    border:14px solid var(--schiuma);border-left:none;border-radius:0 26px 26px 0;
+  }
+  .beer{
+    position:absolute;left:0;right:0;bottom:0;
+    background:linear-gradient(180deg,var(--oro-chiaro),var(--oro));
+    transition:height 1s ease;
+  }
+  .beer::before{ /* schiuma */
+    content:"";position:absolute;left:0;right:0;top:-12px;height:16px;
+    background:var(--schiuma);border-radius:50% 50% 40% 40%/100% 100% 0 0;
+  }
+  .mass .pct{font-family:'Anton',sans-serif;color:var(--oro);font-size:30px;margin-top:16px}
+  .mass .pct span{color:var(--crema);font-family:'Fraunces';font-size:14px;display:block;opacity:.75;letter-spacing:1px}
+
+  /* ---- statistiche ---- */
+  .stats{padding:56px 22px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.35))}
+  .stats h2{text-align:center;font-family:'Alfa Slab One',cursive;color:var(--oro);font-size:clamp(22px,4vw,32px);margin-bottom:8px}
+  .stats .dis{text-align:center;color:var(--crema);opacity:.6;font-size:13px;margin-bottom:34px;font-style:italic}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;max-width:880px;margin:0 auto}
+  .stat{
+    background:var(--crema);border-radius:14px;padding:22px 14px;text-align:center;
+    border-bottom:5px solid var(--oro);box-shadow:0 10px 24px rgba(0,0,0,.3);
+  }
+  .stat .ic{font-size:30px}
+  .stat .v{font-family:'Anton',sans-serif;color:var(--rosso);font-size:38px;line-height:1;margin:6px 0 4px}
+  .stat .k{color:var(--legno);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+
+  /* ---- prenotazione capannone ---- */
+  .prenota{padding:56px 22px 10px}
+  .prenota h2{text-align:center;font-family:'Alfa Slab One',cursive;color:var(--oro);font-size:clamp(22px,4vw,32px);margin-bottom:8px}
+  .prenota .dis{text-align:center;color:var(--crema);opacity:.6;font-size:13px;margin-bottom:34px;font-style:italic}
+  .ticket{
+    max-width:880px;margin:0 auto;
+    display:grid;grid-template-columns:1.15fr .85fr;gap:0;
+    background:var(--crema);border-radius:16px;overflow:hidden;
+    border-top:5px solid var(--oro);
+    box-shadow:0 18px 44px rgba(0,0,0,.45);
+  }
+  .ticket-main{padding:28px 26px 26px;position:relative}
+  .ticket-main::after{ /* perforazione stile biglietto */
+    content:"";position:absolute;top:14px;bottom:14px;right:0;width:0;
+    border-right:3px dashed rgba(36,22,6,.28);
+  }
+  .tent-label{
+    display:inline-block;background:var(--rosso);color:#fff;
+    font-family:'Anton',sans-serif;letter-spacing:2px;font-size:12px;
+    padding:5px 12px;border-radius:999px;text-transform:uppercase;
+  }
+  .ticket-main h3{
+    font-family:'Alfa Slab One',cursive;color:var(--legno);
+    font-size:clamp(24px,4.2vw,34px);line-height:1.05;margin:10px 0 4px;
+  }
+  .ticket-main .zelt-sub{color:var(--legno);opacity:.65;font-size:14px;font-style:italic;margin-bottom:18px}
+  .dett{list-style:none;display:grid;gap:11px;margin-bottom:18px}
+  .dett li{display:flex;gap:10px;align-items:flex-start;color:var(--legno);font-size:15px;line-height:1.4}
+  .dett li .i{font-size:18px;line-height:1.2;flex:none}
+  .dett li b{font-weight:900}
+  .cd-mini{
+    display:inline-block;background:var(--legno);color:var(--oro-chiaro);
+    font-family:'Anton',sans-serif;letter-spacing:1px;font-size:14px;
+    padding:8px 14px;border-radius:10px;margin-bottom:18px;
+  }
+  .btn{
+    display:inline-block;background:var(--blu);color:#fff;text-decoration:none;
+    font-family:'Anton',sans-serif;letter-spacing:1px;font-size:15px;
+    padding:12px 20px;border-radius:10px;
+    box-shadow:0 6px 0 var(--blu-scuro);transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(3px);box-shadow:0 3px 0 var(--blu-scuro)}
+  .ticket-foto{background:var(--legno);display:flex;flex-direction:column}
+  .ticket-foto img{display:block;width:100%;height:100%;object-fit:cover;min-height:260px}
+  .ticket-foto figcaption{
+    color:var(--schiuma);font-size:12px;letter-spacing:1px;text-align:center;
+    padding:10px 12px;background:var(--legno-2);text-transform:uppercase;
+  }
+  @media(max-width:720px){
+    .ticket{grid-template-columns:1fr}
+    .ticket-main::after{display:none}
+    .ticket-foto{order:-1}
+    .ticket-foto img{max-height:420px}
+  }
+
+  /* ---- rosa GANI ---- */
+  .rosa{padding:56px 22px 0;text-align:center}
+  .rosa h2{font-family:'Alfa Slab One',cursive;color:var(--oro);font-size:clamp(22px,4vw,32px);margin-bottom:8px}
+  .rosa .dis{color:var(--crema);opacity:.6;font-size:13px;margin-bottom:28px;font-style:italic}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:880px;margin:0 auto}
+  .chip{
+    background:var(--crema);color:var(--legno);border-radius:999px;
+    padding:9px 16px;font-weight:600;font-size:14px;
+    border-bottom:3px solid var(--oro);box-shadow:0 6px 16px rgba(0,0,0,.3);
+    display:flex;align-items:center;gap:8px;
+  }
+  .chip i{font-style:normal;font-family:'Anton',sans-serif;color:var(--rosso);font-size:12px;opacity:.75}
+
+  /* ---- sondaggi ---- */
+  .sondaggio{padding:54px 22px 10px}
+  .sondaggio h2{text-align:center;font-family:'Alfa Slab One',cursive;color:var(--oro);font-size:clamp(22px,4vw,32px);margin-bottom:8px}
+  .sondaggio .dis{text-align:center;color:var(--crema);opacity:.6;font-size:13px;margin-bottom:34px;font-style:italic}
+  .polls{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:18px;max-width:880px;margin:0 auto}
+  .poll{
+    background:var(--crema);border-radius:14px;padding:20px 18px;
+    border-bottom:5px solid var(--oro);box-shadow:0 10px 26px rgba(0,0,0,.32);
+    display:flex;flex-direction:column;
+  }
+  .poll h3{
+    font-family:'Alfa Slab One',cursive;color:var(--legno);font-size:19px;
+    line-height:1.15;margin-bottom:14px;display:flex;gap:9px;align-items:flex-start;
+  }
+  .poll h3 .ic{font-size:22px;flex:none;line-height:1}
+  .vota{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+  .vota select{
+    flex:1;min-width:150px;font-family:'Fraunces',Georgia,serif;font-size:15px;
+    padding:10px 12px;border-radius:9px;border:2px solid rgba(36,22,6,.25);
+    background:#fff;color:var(--legno);
+  }
+  .vota button,.si-no button{
+    font-family:'Anton',sans-serif;letter-spacing:1px;font-size:14px;color:#fff;
+    background:var(--rosso);border:none;padding:11px 18px;border-radius:9px;cursor:pointer;
+    box-shadow:0 4px 0 #7d1f19;transition:transform .12s ease,box-shadow .12s ease;
+  }
+  .vota button:hover,.si-no button:hover{transform:translateY(2px);box-shadow:0 2px 0 #7d1f19}
+  .si-no{display:flex;gap:10px;margin-bottom:14px}
+  .si-no button{flex:1}
+  .si-no .no{background:var(--blu);box-shadow:0 4px 0 var(--blu-scuro)}
+  .si-no .no:hover{box-shadow:0 2px 0 var(--blu-scuro)}
+  .bars{display:grid;gap:8px;margin-top:auto}
+  .bar{font-size:13px;color:var(--legno)}
+  .bar .top{display:flex;justify-content:space-between;gap:10px;margin-bottom:3px}
+  .bar .top b{font-weight:900}
+  .bar .track{background:rgba(36,22,6,.12);border-radius:999px;height:10px;overflow:hidden}
+  .bar .fill{height:100%;background:linear-gradient(90deg,var(--oro-chiaro),var(--oro));border-radius:999px;transition:width .5s ease}
+  .bar.top1 .fill{background:linear-gradient(90deg,#d9564c,var(--rosso))}
+  .poll .tot{font-size:12px;color:var(--legno);opacity:.55;margin-top:12px;font-style:italic}
+  .poll .vuoto{font-size:13px;color:var(--legno);opacity:.55;font-style:italic}
+
+  /* ---- sondaggio Il Maestro ---- */
+  .maestro{
+    max-width:880px;margin:24px auto 0;
+    display:grid;grid-template-columns:.8fr 1.2fr;
+    background:var(--crema);border-radius:16px;overflow:hidden;
+    border-top:5px solid var(--rosso);box-shadow:0 16px 40px rgba(0,0,0,.42);
+  }
+  .maestro figure{background:var(--legno);display:flex;flex-direction:column}
+  .maestro img{display:block;width:100%;height:100%;object-fit:cover;min-height:260px}
+  .maestro figcaption{
+    color:var(--schiuma);font-size:11px;letter-spacing:1px;text-align:center;
+    padding:9px 10px;background:var(--legno-2);text-transform:uppercase;
+  }
+  .maestro .box{padding:24px 22px;display:flex;flex-direction:column}
+  .maestro h3{font-family:'Alfa Slab One',cursive;color:var(--legno);font-size:clamp(20px,3.4vw,28px);line-height:1.1;margin-bottom:6px}
+  .maestro .sotto{color:var(--legno);opacity:.65;font-size:14px;font-style:italic;margin-bottom:18px}
+  @media(max-width:720px){
+    .maestro{grid-template-columns:1fr}
+    .maestro img{max-height:420px}
+  }
+  .poll .mio,.maestro .mio{
+    font-size:12px;color:var(--legno);opacity:.75;margin-top:10px;
+    font-weight:600;letter-spacing:.3px;
+  }
+  .sync{
+    max-width:880px;margin:26px auto 0;text-align:center;
+    font-size:12.5px;letter-spacing:.5px;color:var(--crema);opacity:.55;font-style:italic;
+  }
+  .sync.ok{color:#9ad7a0;opacity:.9;font-style:normal}
+  .sync.ko{color:#f0a09a;opacity:.95;font-style:normal}
+  .reset{
+    display:block;margin:26px auto 0;background:none;border:1px solid rgba(245,239,224,.3);
+    color:var(--crema);opacity:.6;font-family:'Fraunces',Georgia,serif;font-size:12px;
+    padding:8px 16px;border-radius:999px;cursor:pointer;letter-spacing:1px;
+  }
+  .reset:hover{opacity:1}
+
+  /* ---- archivio: sondaggi chiusi ---- */
+  .vota,.si-no,.reset,.poll .mio,.maestro .mio{display:none!important}
+  .archivio{display:block;text-align:center;background:var(--rosso);color:#fff;font-family:'Anton',sans-serif;letter-spacing:1px;
+    font-size:14px;padding:10px 16px;text-decoration:none}
+  .archivio:hover{background:#9c2a22}
+
+  /* ---- footer ---- */
+  footer{
+    text-align:center;padding:46px 22px;
+    background:linear-gradient(90deg,var(--legno),var(--legno-2));
+    border-top:3px solid var(--oro);
+  }
+  footer .prosit{font-family:'Alfa Slab One',cursive;color:var(--oro);font-size:clamp(26px,6vw,48px);letter-spacing:2px}
+  footer .small{color:var(--crema);opacity:.6;margin-top:10px;font-size:13px;letter-spacing:1px}
+
+  /* ---- reveal ---- */
+  .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="rauten"></div>
+<canvas id="confetti"></canvas>
+
+<div class="wrap">
+  <a class="archivio" href="/">ARCHIVIO · COM'ERA PRIMA DELLA PARTENZA — VAI AL RESOCONTO →</a>
+  <header>
+    <div class="mark">
+      <span class="krug">🍺</span>
+      <div>
+        <b>GANI</b><br>
+        <span>Operazione Wiesn 2026</span>
+      </div>
+    </div>
+    <div class="flag" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </header>
+
+  <section class="hero">
+    <div class="kicker rv">26 Settembre 2026 · Destinazione München 🇩🇪</div>
+    <h1 class="rv">I GANI<br>vanno all'<span class="gold">OKTOBERFEST</span></h1>
+    <p class="sub rv">Boccali alla mano, Lederhosen nel trolley e fegato in modalità sacrificale. Il conto alla rovescia ufficiale verso la Wiesn è iniziato.</p>
+
+    <figure class="foto rv">
+      <img src="/prima/anteprima.jpg" alt="GANI in Lederhosen all'Oktoberfest 2026 con Maß">
+      <span class="tag">ANTEPRIMA WIESN</span>
+    </figure>
+  </section>
+
+  <section class="countdown-sec">
+    <div class="cd-title rv">Tempo alla partenza</div>
+    <div class="cd-note rv" id="targetNote">26/09/2026 · verso Monaco di Baviera</div>
+    <div class="clock rv">
+      <div class="unit"><div class="num" id="d">--</div><div class="lbl">Giorni</div></div>
+      <div class="unit"><div class="num" id="h">--</div><div class="lbl">Ore</div></div>
+      <div class="unit"><div class="num" id="m">--</div><div class="lbl">Minuti</div></div>
+      <div class="unit"><div class="num" id="s">--</div><div class="lbl">Secondi</div></div>
+    </div>
+
+    <div class="mass rv">
+      <h3>Maß-o-meter · livello hype</h3>
+      <div class="mug"><div class="beer" id="beer" style="height:0%"></div></div>
+      <div class="pct"><span id="pctv">0%</span><span>boccale riempito man mano che si avvicina la partenza</span></div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <h2 class="rv">Statistiche pre-partenza</h2>
+    <p class="dis rv">Stime ufficiali del Comitato Tecnico GANI (margine d'errore: irrilevante)</p>
+    <div class="grid">
+      <div class="stat rv"><div class="ic">🍺</div><div class="v" data-to="48">0</div><div class="k">Maß previste</div></div>
+      <div class="stat rv"><div class="ic">🥨</div><div class="v" data-to="36">0</div><div class="k">Brezn</div></div>
+      <div class="stat rv"><div class="ic">🍖</div><div class="v" data-to="12">0</div><div class="k">Schweinshaxe</div></div>
+      <div class="stat rv"><div class="ic">🎵</div><div class="v" data-to="99">0</div><div class="k">"Prosit!" gridati</div></div>
+    </div>
+  </section>
+
+
+  <section class="prenota">
+    <h2 class="rv">Prenotazione confermata 🎟️</h2>
+    <p class="dis rv">Tavolo bloccato: da lì in poi è tutto in discesa (o quasi)</p>
+
+    <div class="ticket rv">
+      <div class="ticket-main">
+        <span class="tent-label">Capannone</span>
+        <h3>Marstall Festzelt</h3>
+        <p class="zelt-sub">Famiglia Able · all'ingresso principale della Theresienwiese</p>
+        <ul class="dett">
+          <li><span class="i">📅</span><div><b>Domenica 27 settembre 2026</b></div></li>
+          <li><span class="i">🕚</span><div>Ingresso alle <b>ore 11:00</b> (orario locale, Monaco)</div></li>
+          <li><span class="i">📍</span><div>Wirtsbudenstraße 131 · 80339 München</div></li>
+          <li><span class="i">🍺</span><div>Domenica il tendone apre alle 09:00 — noi entriamo alle 11:00</div></li>
+        </ul>
+        <div class="cd-mini" id="cdMarstall">--</div><br>
+        <a class="btn" href="https://www.marstall-oktoberfest.de/english.html" target="_blank" rel="noopener">Sito del Marstall ↗</a>
+      </div>
+      <figure class="ticket-foto">
+        <img src="/prima/marstall.jpg" alt="Uomo in Lederhosen con cartello GO! Marstall Festzelt">
+        <figcaption>I biglietti del capannone sono nostri</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="rosa">
+    <h2 class="rv">La rosa dei GANI</h2>
+    <p class="dis rv">16 convocati, in rigoroso ordine alfabetico</p>
+    <div class="chips rv" id="chips"></div>
+  </section>
+
+  <section class="sondaggio">
+    <h2 class="rv">Il Toto-Wiesn 🗳️</h2>
+    <p class="dis rv">Sondaggi chiusi. Il verdetto è nella pagina delle pagelle.</p>
+
+    <div class="polls" id="polls"></div>
+
+    <div class="maestro rv">
+      <figure>
+        <img src="/prima/maestro.jpg" alt="Il Maestro in Lederhosen con un neonato in braccio, tra biberon e pannolini">
+        <figcaption>Prove tecniche di forfait</figcaption>
+      </figure>
+      <div class="box">
+        <h3>Il Maestro ci darà la sola?</h3>
+        <p class="sotto">Le prove a carico sono schiaccianti. La difesa non pervenuta.</p>
+        <div class="si-no">
+          <button type="button" data-maestro="si">SÌ, AL 100%</button>
+          <button type="button" class="no" data-maestro="no">NO, CI SARÀ</button>
+        </div>
+        <div class="bars" id="barsMaestro"></div>
+        <div class="mio" id="mioMaestro"></div>
+        <div class="tot" id="totMaestro"></div>
+      </div>
+    </div>
+
+    <p class="sync" id="syncStato"></p>
+    <button type="button" class="reset" id="resetPoll">azzera i sondaggi su questo dispositivo</button>
+  </section>
+
+  <footer>
+    <div class="prosit">O'ZAPFT IS! 🍻</div>
+    <div class="small">GANI · Wiesn 2026 · München — Prosit!</div>
+  </footer>
+</div>
+
+<script>
+  /* ===================== CONFIGURAZIONE — MODIFICA QUI ===================== */
+  // Data e ora di partenza (fuso Europe/Rome, +02:00 in estate).
+  const PARTENZA = new Date('2026-09-26T08:00:00+02:00');
+  // Riferimento iniziale per il riempimento del boccale (es. oggi).
+  const INIZIO   = new Date('2026-05-30T00:00:00+02:00');
+  // Prenotazione al capannone: Marstall Festzelt, 27/09/2026 ore 11:00 (Monaco).
+  const MARSTALL = new Date('2026-09-27T11:00:00+02:00');
+  // Sondaggi condivisi: incolla qui l'URL /exec dell'Apps Script collegato al Google Sheet.
+  // Se resta vuoto, i voti restano salvati solo sul browser di chi vota.
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxsee3ChbioFSrKe7WNvTtGJRDYmTP2VDKUQ4C3_3eBDHTRYerWWNNWuSBiSBJaCRul/exec';
+  // ========================================================================
+
+  /* ---- countdown ---- */
+  const $ = id => document.getElementById(id);
+  function pad(n){return String(n).padStart(2,'0')}
+  function tick(){
+    const now = new Date();
+    let diff = PARTENZA - now;
+    if(diff <= 0){
+      $('d').textContent='0';$('h').textContent='00';$('m').textContent='00';$('s').textContent='00';
+      $('targetNote').textContent='🍻 SI PARTE! Wiesn, arriviamo!';
+      $('beer').style.height='100%';$('pctv').textContent='100%';
+      return;
+    }
+    const day=86400000,hr=3600000,mi=60000;
+    const g=Math.floor(diff/day);diff-=g*day;
+    const h=Math.floor(diff/hr);diff-=h*hr;
+    const m=Math.floor(diff/mi);diff-=m*mi;
+    const s=Math.floor(diff/1000);
+    $('d').textContent=g;$('h').textContent=pad(h);$('m').textContent=pad(m);$('s').textContent=pad(s);
+    // Maß-o-meter
+    const tot=PARTENZA-INIZIO, done=new Date()-INIZIO;
+    let pct=Math.max(0,Math.min(100,(done/tot)*100));
+    $('beer').style.height=pct.toFixed(1)+'%';
+    $('pctv').textContent=pct.toFixed(0)+'%';
+  }
+  /* ---- countdown mini: ingresso al Marstall Festzelt ---- */
+  function tickMarstall(){
+    const el=$('cdMarstall');if(!el)return;
+    let diff=MARSTALL-new Date();
+    if(diff<=0){el.textContent='🍻 O\'ZAPFT IS · SIAMO DENTRO!';return;}
+    const day=86400000,hr=3600000,mi=60000;
+    const g=Math.floor(diff/day);diff-=g*day;
+    const h=Math.floor(diff/hr);diff-=h*hr;
+    const m=Math.floor(diff/mi);diff-=m*mi;
+    const s=Math.floor(diff/1000);
+    el.textContent=`⏳ ${g}g ${pad(h)}:${pad(m)}:${pad(s)} all'ingresso`;
+  }
+
+  function tuttiITick(){tick();tickMarstall();}
+  tuttiITick();setInterval(tuttiITick,1000);
+
+
+  /* ---- reveal on scroll ---- */
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.15});
+  document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%5*60)+'ms';io.observe(el);});
+
+  /* ---- count-up statistiche ---- */
+  const cs=new IntersectionObserver(es=>{es.forEach(e=>{
+    if(!e.isIntersecting)return;cs.unobserve(e.target);
+    const el=e.target,to=+el.dataset.to;let v=0;const step=Math.max(1,to/40);
+    const t=setInterval(()=>{v+=step;if(v>=to){v=to;clearInterval(t);}el.textContent=Math.floor(v);},28);
+  })},{threshold:.5});
+  document.querySelectorAll('.stat .v').forEach(el=>cs.observe(el));
+
+  /* ===================== ROSA GANI + SONDAGGI ===================== */
+  // Elenco convocati (ordine alfabetico, ri-ordinato comunque a runtime).
+  const GANI = ['Alessio','Blanes','Bro','Bubba','Cancio','Cecio','Dino','Fatteo',
+                'Gabbo','Gheorghe','Gonzo','Il Maestro','Ing','Lion','Noxer','Virgilio']
+               .sort((a,b)=>a.localeCompare(b,'it'));
+
+  const CATEGORIE = [
+    {id:'vomito',  ic:'🤢', q:'Chi vomiterà per primo?'},
+    {id:'perso',   ic:'🧭', q:'Chi si perderà per primo?'},
+    {id:'arresto', ic:'🚔', q:'Chi verrà arrestato per primo?'},
+    {id:'sedotto', ic:'💘', q:'Chi verrà violentato per primo?'}
+  ];
+
+  const REMOTO = /^https?:\/\//.test(SHEET_URL);
+  const KEY='gani_sondaggi_v2';
+  let CONTEGGI={};   // {categoria:{scelta:numero}}
+  let MIEI={};       // {categoria:'scelta'} — cosa ha votato questo dispositivo
+  let VOTER='';      // identificativo anonimo del votante
+  try{
+    const raw = JSON.parse(localStorage.getItem(KEY)) || {};
+    CONTEGGI = raw.conteggi || {}; MIEI = raw.miei || {}; VOTER = raw.voter || '';
+  }catch(e){}
+  if(!VOTER) VOTER = 'g' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+  function salva(){ try{ localStorage.setItem(KEY,JSON.stringify({conteggi:CONTEGGI,miei:MIEI,voter:VOTER})); }catch(e){} }
+  salva();
+
+  /* ---- rosa ---- */
+  $('chips').innerHTML = GANI.map((n,i)=>`<span class="chip"><i>${pad(i+1)}</i>${n}</span>`).join('');
+
+  /* ---- costruzione schede sondaggio ---- */
+  $('polls').innerHTML = CATEGORIE.map(c=>`
+      <div class="poll">
+        <h3><span class="ic">${c.ic}</span><span>${c.q}</span></h3>
+        <div class="vota">
+          <select id="sel-${c.id}" aria-label="${c.q}">
+            <option value="">— scegli un GANE —</option>
+            ${GANI.map(n=>`<option>${n}</option>`).join('')}
+          </select>
+          <button type="button" data-cat="${c.id}">VOTA</button>
+        </div>
+        <div class="bars" id="bars-${c.id}"></div>
+        <div class="mio" id="mio-${c.id}"></div>
+        <div class="tot" id="tot-${c.id}"></div>
+      </div>`).join('');
+
+  /* ---- disegno barre risultati ---- */
+  function barre(voti, contenitore, totEl, limite){
+    const righe = Object.entries(voti).sort((a,b)=>b[1]-a[1]);
+    const tot = righe.reduce((s,r)=>s+r[1],0);
+    if(!tot){
+      contenitore.innerHTML='<div class="vuoto">Nessun voto: la giuria è ancora sobria.</div>';
+      totEl.textContent='';
+      return;
+    }
+    const max = righe[0][1];
+    contenitore.innerHTML = righe.slice(0,limite||99).map(([n,v],i)=>`
+      <div class="bar${i===0?' top1':''}">
+        <div class="top"><b>${n}</b><span>${v} · ${Math.round(v/tot*100)}%</span></div>
+        <div class="track"><div class="fill" style="width:${Math.max(6,v/max*100)}%"></div></div>
+      </div>`).join('');
+    totEl.textContent = tot===1 ? '1 voto espresso' : `${tot} voti espressi`;
+  }
+
+  const ETICHETTE_MAESTRO = {si:'Sì, ci dà la sola', no:'No, ci sarà'};
+
+  function aggiorna(){
+    CATEGORIE.forEach(c=>{
+      barre(CONTEGGI[c.id]||{}, $('bars-'+c.id), $('tot-'+c.id), 5);
+      const mio = MIEI[c.id];
+      $('mio-'+c.id).textContent = mio ? `Il tuo voto: ${mio} — puoi cambiarlo quando vuoi.` : '';
+      if(mio) $('sel-'+c.id).value = mio;
+    });
+    const m = CONTEGGI.maestro||{};
+    barre({[ETICHETTE_MAESTRO.si]:m['si']||0,[ETICHETTE_MAESTRO.no]:m['no']||0}, $('barsMaestro'), $('totMaestro'));
+    $('mioMaestro').textContent = MIEI.maestro ? `Il tuo voto: ${ETICHETTE_MAESTRO[MIEI.maestro]}` : '';
+  }
+
+  function stato(txt,cls){ $('syncStato').textContent = txt; $('syncStato').className = 'sync '+(cls||''); }
+
+  /* ---- conteggio locale (usato da solo, o come anteprima prima della risposta del foglio) ---- */
+  function contaLocale(cat,prima,dopo){
+    CONTEGGI[cat] = CONTEGGI[cat] || {};
+    if(prima && CONTEGGI[cat][prima]){
+      CONTEGGI[cat][prima]--;
+      if(CONTEGGI[cat][prima]<=0) delete CONTEGGI[cat][prima];
+    }
+    CONTEGGI[cat][dopo] = (CONTEGGI[cat][dopo]||0) + 1;
+  }
+
+  /* ---- chiamata al foglio, con tentativi ----
+     Apps Script, quando riceve richieste ravvicinate, ogni tanto risponde con una pagina
+     HTML di errore invece che con il JSON: in quel caso si riprova un paio di volte. */
+  function chiamata(opzioni, tentativi){
+    tentativi = tentativi || 3;
+    return fetch(SHEET_URL, opzioni)
+      .then(r=>r.text())
+      .then(testo=>{
+        let d;
+        try{ d = JSON.parse(testo); }
+        catch(e){ throw new Error('risposta non valida dal foglio'); }
+        if(!d.ok) throw new Error(d.errore||'richiesta rifiutata');
+        return d;
+      })
+      .catch(err=>{
+        if(tentativi<=1) throw err;
+        return new Promise(res=>setTimeout(res,900)).then(()=>chiamata(opzioni,tentativi-1));
+      });
+  }
+
+  /* ---- lettura classifica condivisa dal Google Sheet ---- */
+  function carica(){
+    if(!REMOTO){ stato('Nessun foglio collegato: i voti restano su questo dispositivo.',''); return; }
+    stato('Carico la classifica dal foglio Google…','');
+    chiamata().then(d=>{
+      CONTEGGI = d.conteggi || {}; salva(); aggiorna();
+      stato('Classifica condivisa · aggiornata dal foglio Google ✔','ok');
+    }).catch(err=>{
+      stato('Foglio non raggiungibile: vedi solo i voti salvati qui. ('+err.message+')','ko');
+    });
+  }
+
+  /* ---- invio di un voto (uno per categoria, modificabile) ---- */
+  function invia(categoria, scelta){
+    const prima = MIEI[categoria];
+    if(prima === scelta) return;
+    MIEI[categoria] = scelta;
+    contaLocale(categoria, prima, scelta);
+    salva(); aggiorna(); celebra();
+    if(!REMOTO) return;
+    stato('Invio il voto al foglio Google…','');
+    chiamata({
+      method:'POST',
+      headers:{'Content-Type':'text/plain;charset=utf-8'},   // evita il preflight CORS
+      body:JSON.stringify({voterId:VOTER, categoria, scelta})
+    }).then(d=>{
+      CONTEGGI = d.conteggi || {}; salva(); aggiorna();
+      stato('Voto registrato sul foglio Google ✔','ok');
+    }).catch(err=>{
+      stato('Voto NON registrato sul foglio, per ora vale solo qui. ('+err.message+')','ko');
+    });
+  }
+
+  /* ---- voti ---- */
+  $('polls').addEventListener('click', ev=>{
+    const b = ev.target.closest('button[data-cat]');
+    if(!b) return;
+    const cat = b.dataset.cat, sel = $('sel-'+cat);
+    if(!sel.value){ sel.focus(); return; }
+    /* sondaggi chiusi */
+  });
+
+  document.querySelectorAll('[data-maestro]').forEach(b=>{
+    /* sondaggi chiusi */
+  });
+
+  $('resetPoll').addEventListener('click', ()=>{
+    if(!confirm('Azzerare i voti salvati su questo dispositivo?')) return;
+    CONTEGGI={}; MIEI={}; salva(); aggiorna(); carica();
+  });
+
+  aggiorna();
+  carica();
+
+  /* ---- confetti oro/blu/bianco ---- */
+  const cv=$('confetti'),cx=cv.getContext('2d');
+  let W,H,parts=[];
+  function size(){W=cv.width=innerWidth;H=cv.height=innerHeight;}
+  size();addEventListener('resize',size);
+  const COL=['#e0a423','#f3c14a','#2b6cb0','#ffffff','#b8332a'];
+  function burst(n=140){
+    for(let i=0;i<n;i++)parts.push({x:Math.random()*W,y:-20-Math.random()*H*.3,
+      r:4+Math.random()*6,c:COL[i%COL.length],vy:2+Math.random()*3,vx:-1.5+Math.random()*3,
+      a:Math.random()*Math.PI,va:-.1+Math.random()*.2});
+  }
+  function draw(){
+    cx.clearRect(0,0,W,H);
+    parts.forEach(p=>{p.y+=p.vy;p.x+=p.vx;p.a+=p.va;
+      cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;
+      cx.fillRect(-p.r/2,-p.r/2,p.r,p.r*.6);cx.restore();});
+    parts=parts.filter(p=>p.y<H+30);
+    if(parts.length)requestAnimationFrame(draw);
+  }
+  function celebra(){burst();draw();}
+  addEventListener('load',()=>setTimeout(celebra,400));
+  // ri-celebra al click sul boccale principale
+  document.querySelector('.mark .krug').style.cursor='pointer';
+  document.querySelector('.mark .krug').addEventListener('click',celebra);
+</script>
+</body>
+</html>

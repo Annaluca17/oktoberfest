@@ -1,0 +1,6 @@
+---
+import { classeVoto } from '../lib';
+interface Props { voto?: string }
+const { voto } = Astro.props;
+---
+<span class={classeVoto(voto)} title={voto ? `Voto: ${voto}` : 'Voto in arrivo'}>{voto ?? '–'}</span>
