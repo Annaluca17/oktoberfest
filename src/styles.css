@@ -152,4 +152,4 @@ blockquote cite{display:block;font-size:12.5px;font-style:normal;font-weight:400
 footer.fondo{text-align:center;padding:40px 16px;background:linear-gradient(90deg,var(--legno),var(--legno-2));border-top:3px solid var(--oro);margin-top:30px}
 footer.fondo .prosit{font-family:'Alfa Slab One',serif;color:var(--oro);font-size:clamp(24px,6vw,42px);letter-spacing:2px}
 footer.fondo .small{color:var(--crema);opacity:.6;margin-top:8px;font-size:13px}
-.slot.cop{aspect-ratio:3/2}
+.slot.cop{aspect-ratio:4/3}
