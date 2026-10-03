@@ -40,3 +40,9 @@ npm run dev      # anteprima locale
 npm run build    # verifica: se fallisce, Vercel non pubblica
 npm run foto     # prepara le foto da foto-originali/ (resize + via GPS)
 ```
+
+## Sito pubblico o in lavorazione
+
+`sito.config.json` → `"pubblico": false`: in produzione (main) si vede solo la pagina "lavori in corso".
+Il sito completo è nelle anteprime Vercel del branch di lavoro, accessibili con login Vercel.
+Per aprire a tutti: `"pubblico": true`.
