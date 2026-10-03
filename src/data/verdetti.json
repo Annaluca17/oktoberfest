@@ -1,16 +1,51 @@
 {
   "tabellino": [
-    { "ruolo": "Migliore in campo", "chi": "" },
-    { "ruolo": "Peggiore in campo", "chi": "" },
-    { "ruolo": "Ammoniti", "chi": "" },
-    { "ruolo": "Espulsi", "chi": "" },
-    { "ruolo": "Sostituiti (primo a crollare)", "chi": "" }
+    {
+      "ruolo": "Migliore in campo",
+      "chi": ""
+    },
+    {
+      "ruolo": "Peggiore in campo",
+      "chi": ""
+    },
+    {
+      "ruolo": "Ammoniti",
+      "chi": ""
+    },
+    {
+      "ruolo": "Espulsi",
+      "chi": ""
+    },
+    {
+      "ruolo": "Sostituiti (primo a crollare)",
+      "chi": ""
+    }
   ],
   "extracampo": [
-    { "nome": "Il Marstall", "ic": "🎪", "voto": "", "giudizio": "" },
-    { "nome": "La Maß", "ic": "🍺", "voto": "", "giudizio": "" },
-    { "nome": "L'alloggio", "ic": "🛏️", "voto": "", "giudizio": "" },
-    { "nome": "Il viaggio", "ic": "✈️", "voto": "", "giudizio": "" }
+    {
+      "nome": "Il Marstall",
+      "ic": "🎪",
+      "voto": "",
+      "giudizio": ""
+    },
+    {
+      "nome": "La Maß",
+      "ic": "🍺",
+      "voto": "",
+      "giudizio": ""
+    },
+    {
+      "nome": "L'alloggio",
+      "ic": "🛏️",
+      "voto": "",
+      "giudizio": ""
+    },
+    {
+      "nome": "Il viaggio",
+      "ic": "✈️",
+      "voto": "",
+      "giudizio": ""
+    }
   ],
   "totowiesn": [
     {
@@ -23,7 +58,7 @@
       "ic": "🧭",
       "domanda": "Chi si perderà per primo?",
       "pronostico": "Blanes (9 voti su 12)",
-      "realta": "Dino. Sabato 26, ore 17:18: «Dini ha vinto il premio, primo che se perde».",
+      "realta": "Dino. Sabato 26, ore 17:18, Noxer: «Dini ha vinto il premio, primo che se perde».",
       "momento": "dino-disperso"
     },
     {
@@ -42,16 +77,46 @@
       "ic": "👶",
       "domanda": "Il Maestro ci darà la sola?",
       "pronostico": "Sì, 9 a 5",
-      "realta": "No. Presente dal sabato mattina, Etna permettendo.",
-      "momento": "maestro-atterra"
+      "realta": "No. Sabato sera alle 21:18 era al pub con il gruppo.",
+      "momento": "maestro-presente"
     }
   ],
   "numeri": [
-    { "ic": "🍺", "voce": "Maß", "previsti": 48, "reali": null },
-    { "ic": "🥨", "voce": "Brezn", "previsti": 36, "reali": null },
-    { "ic": "🍖", "voce": "Schweinshaxe", "previsti": 12, "reali": null },
-    { "ic": "🎵", "voce": "\"Prosit!\" gridati", "previsti": 99, "reali": null },
-    { "ic": "😴", "voce": "Ore dormite da Dino (sab→dom)", "previsti": null, "reali": null },
-    { "ic": "🔑", "voce": "Chiavi della macchina perse", "previsti": null, "reali": 1 }
+    {
+      "ic": "🍺",
+      "voce": "Maß",
+      "previsti": 48,
+      "reali": null
+    },
+    {
+      "ic": "🥨",
+      "voce": "Brezn",
+      "previsti": 36,
+      "reali": null
+    },
+    {
+      "ic": "🍖",
+      "voce": "Schweinshaxe",
+      "previsti": 12,
+      "reali": null
+    },
+    {
+      "ic": "🎵",
+      "voce": "\"Prosit!\" gridati",
+      "previsti": 99,
+      "reali": null
+    },
+    {
+      "ic": "😴",
+      "voce": "Ore dormite da Dino (sab→dom)",
+      "previsti": null,
+      "reali": null
+    },
+    {
+      "ic": "🔑",
+      "voce": "Chiavi della macchina perse",
+      "previsti": null,
+      "reali": 1
+    }
   ]
 }

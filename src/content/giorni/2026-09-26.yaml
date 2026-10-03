@@ -1,5 +1,4 @@
 # BOZZA ricostruita dalla chat del gruppo. Orari dai messaggi WhatsApp.
-# I nomi tra [quadre] sono nomi della chat ancora da abbinare al soprannome GANE.
 data: 2026-09-26
 titolo: Sabato 26 · Lo sbarco
 sottotitolo: Partenza all'alba, Wiesn al pomeriggio, una camera tripla con un solo inquilino.
@@ -11,22 +10,22 @@ momenti:
     titolo: «Buongiorno, che Terminal è?»
     testo: |
       Il primo a dare segni di vita è Dino, alle 4:43. Risponde Ing: Terminal 1.
-      Il volo è quello delle 7:25. Il Maestro, intanto, fa colazione a casa con un certo distacco.
+      Il volo è quello delle 7:25. Noxer, intanto, fa colazione a casa con un certo distacco.
     citazione:
       testo: 20 anni fa l'avrei fatto. Stamattina fette biscottate integrali e marmellata bio...
-      autore: Il Maestro
-    protagonisti: [dino, ing, il-maestro]
+      autore: Noxer
+    protagonisti: [dino, ing, noxer]
     media:
       - foto: 26-terminal.jpg
 
-  - id: maestro-atterra
+  - id: noxer-atterra
     ora: "08:39"
     luogo: Monaco, aeroporto
-    titolo: Il Maestro non dà la sola
+    titolo: Noxer batte l'Etna
     testo: |
-      Per giorni l'Etna aveva minacciato di lasciarlo a terra. Il Toto-Wiesn lo dava per disperso 9 a 5.
-      Alle 8:39 arriva il messaggio: «Arrivato, ditemi a che terminal siete».
-    protagonisti: [il-maestro]
+      Per giorni l'Etna aveva minacciato di lasciarlo a terra. Alle 8:39 arriva il messaggio:
+      «Arrivato, ditemi a che terminal siete».
+    protagonisti: [noxer]
     media: []
 
   - id: morigeratezza
@@ -49,12 +48,12 @@ momenti:
     luogo: Theresienwiese
     titolo: Si va a piedi
     testo: |
-      Dall'hotel alla Wiesn ci si muove a piedi. Le istruzioni per i ritardatari sono essenziali:
-      «Metti maps». E soprattutto niente zaino.
+      BR1 atterra più tardi, scarica la valigia e chiede come raggiungere gli altri. Taxi? No: a piedi.
+      Le istruzioni sono essenziali: «Metti maps». E soprattutto niente zaino.
     citazione:
       testo: Non veni con lo zaino che non entri.
       autore: Cancio
-    protagonisti: [cancio, alessio]
+    protagonisti: [br1, cancio, alessio]
     media: []
 
   - id: autoscontri
@@ -63,7 +62,7 @@ momenti:
     titolo: Autoscontri
     testo: |
       Il punto di ritrovo diventa l'autoscontro davanti al tendone Paulaner. Partono i primi video.
-    protagonisti: [il-maestro, cancio]
+    protagonisti: [noxer, cancio]
     media:
       - video: 26-autoscontri.mp4
 
@@ -73,11 +72,11 @@ momenti:
     titolo: «Io non so do ve sto»
     testo: |
       Alle 16:15 Dino perde il contatto con il gruppo. Alle 16:53 dichiara: «È finito tutto».
-      Alle 17:18 il Maestro ufficializza il primo verdetto del Toto-Wiesn. Alle 17:57 Dino aggiunge: «Voglio morire».
+      Alle 17:18 Noxer ufficializza il primo verdetto del Toto-Wiesn. Alle 17:57 Dino aggiunge: «Voglio morire».
     citazione:
       testo: Dini ha vinto il premio, primo che se perde.
-      autore: Il Maestro
-    protagonisti: [dino, il-maestro]
+      autore: Noxer
+    protagonisti: [dino, noxer]
     media: []
 
   - id: camera-312
@@ -85,12 +84,13 @@ momenti:
     luogo: Hotel, camera 312
     titolo: 312 alone
     testo: |
-      Rientro in hotel per il riposino. Dino si ritrova da solo in camera e lo comunica al gruppo più volte.
-      Il Maestro, intanto, recensisce i sanitari tedeschi.
+      Rientro per il riposino. Bro e il gruppo dell'ostello si fermano lì, Gabbo in hotel.
+      Dino si ritrova da solo in camera e lo comunica al gruppo più volte, finché alle 18:59 trasloca nella 303 di BR1.
+      Noxer, intanto, recensisce i sanitari tedeschi.
     citazione:
       testo: Non c'è il bidet. Paese di animali.
-      autore: Il Maestro
-    protagonisti: [dino, il-maestro]
+      autore: Noxer
+    protagonisti: [dino, br1, bro, gabbo, noxer]
     media: []
 
   - id: pub-sabato
@@ -98,18 +98,30 @@ momenti:
     luogo: Pub vicino all'hotel
     titolo: Cena per chi resuscita
     testo: |
-      «Per chi resuscita, stiamo andando a un pub che ha visto [Bruno] e penso ci ceniamo pure.»
-      Alle 21:25 il Maestro fissa un messaggio nel gruppo: «Complimenti ai vincitori del pronostico...».
-    protagonisti: [il-maestro, gabbo]
+      «Per chi resuscita, stiamo andando a un pub che ha visto BR1 e penso ci ceniamo pure.» Firmato Fatteo.
+      Alle 20:06 Cecio: «Arriviamo». Alle 21:25 Noxer fissa un messaggio nel gruppo: «Complimenti ai vincitori del pronostico...».
+    protagonisti: [fatteo, br1, cecio, noxer, gabbo]
     media:
       - foto: 26-pub.jpg
+
+  - id: maestro-presente
+    ora: "21:18"
+    luogo: Pub vicino all'hotel
+    titolo: Il Maestro non dà la sola
+    testo: |
+      Il Toto-Wiesn lo dava per disperso 9 a 5. Alle 21:18 il Maestro manda la posizione dal pub: è a Monaco, con il gruppo.
+    protagonisti: [il-maestro]
+    media: []
 
   - id: discoteca
     ora: "01:28"
     luogo: Discoteca in centro
     titolo: «Se non torno, mandate qualcuno»
     testo: |
-      Notte inoltrata. Una parte del gruppo finisce in discoteca, Cancio avvista «l'unico tuk tuk di Munich».
+      Notte inoltrata. BR1 finisce in discoteca e chiama i rinforzi, Maestro compreso. Cancio avvista «l'unico tuk tuk di Munich».
       Alle 2:30 Dino si sveglia e scopre di avere una camera da tre tutta per sé.
-    protagonisti: [cancio, dino]
+    citazione:
+      testo: Rega, se non torno... mandate qualcuno.
+      autore: BR1
+    protagonisti: [br1, il-maestro, cancio, dino]
     media: []

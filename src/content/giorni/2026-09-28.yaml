@@ -9,11 +9,11 @@ momenti:
     luogo: Monaco
     titolo: Il 5 km defaticante
     testo: |
-      Il programma morigeratezza esisteva davvero. Il Maestro e Bubba escono a correre, [Bruno] si aggrega.
+      Il programma morigeratezza esisteva davvero. Noxer e Bubba escono a correre, BR1 si aggrega: «Io so pronto».
     citazione:
       testo: Stiamo andando a farci un 5 km defaticante.
-      autore: Il Maestro
-    protagonisti: [il-maestro, bubba]
+      autore: Noxer
+    protagonisti: [noxer, bubba, br1]
     media: []
 
   - id: check-out
@@ -22,7 +22,7 @@ momenti:
     titolo: Check-out
     testo: |
       Stanze da lasciare alle 12 (fonte: Ing). Valigie in reception, si torna all'Oktoberfest.
-    protagonisti: [ing]
+    protagonisti: [ing, fatteo, alessio, il-maestro]
     media: []
 
   - id: ricatti
@@ -31,11 +31,11 @@ momenti:
     titolo: Intervento tecnico
     testo: |
       Sosta da Andy's. Nel gruppo cominciano a girare foto della sera prima, e a sparire messaggi.
-      Dino lo definisce «intervento tecnico». Alle 13:45 il gruppo cambia nome: «Oktoberfest 🍻 🍻 & ricatti».
+      Dino lo definisce «intervento tecnico». Alle 13:45 Fatteo cambia nome al gruppo: «Oktoberfest 🍻 🍻 & ricatti».
     citazione:
       testo: Il gruppo è sotto intervento tecnico.
       autore: Dino
-    protagonisti: [dino, gabbo]
+    protagonisti: [dino, gabbo, fatteo]
     media: []
 
   - id: trono-kebab
@@ -43,8 +43,11 @@ momenti:
     luogo: Theresienwiese
     titolo: Il trono del kebab
     testo: |
-      Passaggio di consegne storico: [Chicco] perde il trono del kebab.
-    protagonisti: []
+      Passaggio di consegne storico, certificato da Fatteo: Gonzo perde il trono del kebab.
+    citazione:
+      testo: Spodestato Chicco dal trono kebab.
+      autore: Fatteo
+    protagonisti: [gonzo, fatteo]
     media:
       - foto: 28-kebab.jpg
 
@@ -53,11 +56,11 @@ momenti:
     luogo: Tendone
     titolo: Ricco per sbaglio
     testo: |
-      Battuta della serata.
+      Noxer avverte Fatteo: «Appena se ne accorgono, fanno spostare solo te». Il Maestro lo copre: «Stai tranquillo, sta con me».
     citazione:
       testo: 30 secondi che so ricco per sbaglio e già sti poveri mi stanno sul cazzo.
-      autore: "[Matteo]"
-    protagonisti: []
+      autore: Fatteo
+    protagonisti: [fatteo, noxer, il-maestro]
     media: []
 
   - id: chiavi
@@ -65,22 +68,22 @@ momenti:
     luogo: Monaco
     titolo: Le chiavi
     testo: |
-      Monaco presenta il conto a [Bruno].
+      Monaco presenta il conto a BR1.
     citazione:
       testo: Rega, Monaco ha lasciato il segno... me so perso le chiavi della macchina.
-      autore: "[Bruno]"
-    protagonisti: []
+      autore: BR1
+    protagonisti: [br1]
     media: []
 
-  - id: rientro-maestro
+  - id: rientro-noxer
     ora: "23:32"
     luogo: Verso la Sicilia
     titolo: Dal lato sbagliato
     testo: |
-      Il Maestro rientra e trova l'ultimo ostacolo all'ultimo chilometro.
+      Noxer rientra e trova l'ultimo ostacolo all'ultimo chilometro.
       Alle 3:21 di notte chiede al gruppo a quale capannone siano.
     citazione:
       testo: Arrivato in Sicilia! Sto solo dal lato sbagliato...
-      autore: Il Maestro
-    protagonisti: [il-maestro]
+      autore: Noxer
+    protagonisti: [noxer]
     media: []

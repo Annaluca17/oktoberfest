@@ -9,11 +9,11 @@ momenti:
     luogo: Hotel
     titolo: «Dalle 19»
     testo: |
-      Il Maestro fa il punto: «Dini ha la tripla». Gabbo chiede quante ore abbia dormito.
+      Noxer fa il punto: «Dini ha la tripla». Gabbo chiede quante ore abbia dormito.
     citazione:
       testo: Dalle 19. Ma non è mai abbastanza.
       autore: Dino
-    protagonisti: [dino, il-maestro, gabbo]
+    protagonisti: [dino, noxer, gabbo]
     media: []
 
   - id: marstall
@@ -38,11 +38,12 @@ momenti:
     luogo: Paulaner
     titolo: Ritorno dove stavamo ieri
     testo: |
-      Dopo il Marstall il gruppo si sparpaglia. Cancio trova due tavoli liberi al Paulaner, dove si era stati il giorno prima.
+      Dopo il Marstall il gruppo si sparpaglia. Dino e il Maestro sono fuori, Cancio trova due tavoli liberi al Paulaner,
+      dove si era stati il giorno prima. Gonzo manda la posizione: «Vie dietro».
     citazione:
       testo: Io sto alla Paulaner. Si entra facile.
       autore: Cancio
-    protagonisti: [cancio]
+    protagonisti: [cancio, dino, il-maestro, gonzo]
     media: []
 
   - id: la-torre
@@ -51,11 +52,11 @@ momenti:
     titolo: La torre
     testo: |
       Dino lancia la sfida: «Vieni a fare la torre». Gabbo declina. Dino e Bubba salgono, il resto aspetta sotto.
-      Il Maestro passa, con certificato medico.
+      Bro, intanto, gira da solo. Noxer passa, con certificato medico.
     citazione:
       testo: Il cardiologo ha detto no.
-      autore: Il Maestro
-    protagonisti: [dino, bubba, gabbo, il-maestro, alessio]
+      autore: Noxer
+    protagonisti: [dino, bubba, gabbo, alessio, bro, noxer]
     media:
       - video: 27-torre.mp4
 
@@ -64,9 +65,9 @@ momenti:
     luogo: Paulaner
     titolo: «Ci hanno cacciato»
     testo: |
-      Comunicato del Maestro alle 17:26. Alle 18:12 un secondo bollettino: «Tutto ok, c'è il dottore».
-      Alle 18:48 ci si ritrova di nuovo sotto la statua.
-    protagonisti: [il-maestro]
+      Comunicato di Noxer alle 17:26. Alle 18:12 un secondo bollettino: «Tutto ok, c'è il dottore».
+      Alle 18:48 Fatteo: «Di nuovo sotto la statua».
+    protagonisti: [noxer, fatteo]
     media: []
 
   - id: porte-chiuse
@@ -74,9 +75,9 @@ momenti:
     luogo: Fuori dai tendoni
     titolo: Porte chiuse
     testo: |
-      Gabbo è dentro e chiama tutti, ma la sicurezza non fa più entrare. Alle 20:10 [Chicco] segnala la Käfer Wiesn.
-      Alle 20:46 parte una chiamata di gruppo a 15: nessuno risponde.
-    protagonisti: [gabbo]
+      Gabbo è dentro e chiama tutti, ma la sicurezza non fa più entrare. Alle 20:10 Gonzo segnala la Käfer Wiesn.
+      Alle 20:46 BR1 lancia una chiamata di gruppo a 15: persa.
+    protagonisti: [gabbo, noxer, gonzo, br1]
     media: []
 
   - id: gabbo-disperso
@@ -85,6 +86,6 @@ momenti:
     titolo: Gabbo fuori mappa
     testo: |
       Gabbo condivide la posizione: qualche chilometro a nord-est della Theresienwiese. «Sto tipo in culo.»
-      Alle 22:45 è all'ingresso. Alle 22:48 gli altri sono già usciti.
-    protagonisti: [gabbo]
+      Alle 22:45 è all'ingresso. Alle 22:48 Virgilio: «Siamo usciti».
+    protagonisti: [gabbo, virgilio]
     media: []

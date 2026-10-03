@@ -9,11 +9,12 @@ momenti:
     luogo: Monaco
     titolo: Ultimo assaggio
     testo: |
-      Le ultime foto prima della partenza. «È finita così ieri sera.»
+      Le ultime foto prima della partenza. Bro: «È finita così ieri sera».
+      Il Maestro commenta una foto di Fatteo: «Sono in un camion bestiame». Fatteo: «Sposta poveri».
     citazione:
       testo: Ultimo assaggio di una Monaco trash.
-      autore: "[Senexetti]"
-    protagonisti: []
+      autore: Virgilio
+    protagonisti: [virgilio, bro, il-maestro, fatteo]
     media:
       - foto: 29-ultimo-assaggio.jpg
 
@@ -23,9 +24,9 @@ momenti:
     titolo: Oktoberfest 2027
     testo: |
       A casa da poche ore, si parla già della prossima. Gabbo propone di farla una volta l'anno, Alessio vuole prenotare appena finisce questa.
-      Il gruppo torna a chiamarsi «Oktoberfest 🍻2027 🍻».
+      BR1 chiede la cena, Virgilio si iscrive. Il gruppo torna a chiamarsi «Oktoberfest 🍻2027 🍻».
     citazione:
       testo: Subito tavolo prenotato al Käfer Wiesn per la sera.
       autore: Alessio
-    protagonisti: [gabbo, alessio]
+    protagonisti: [gabbo, alessio, br1, virgilio]
     media: []
